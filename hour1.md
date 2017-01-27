@@ -8,7 +8,7 @@ npm start
 
 target div with id#root
 
-```
+```js
 import React from 'react';
 
 const App = () => <h1>Hello</h1>
@@ -18,7 +18,7 @@ export default App
 ## react - lib to build react components
 ## ReactDOM - place componenets and work in context of DOM
 
-```
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -40,7 +40,7 @@ Args:
 - Native html vs custom component: custom react components need to start with a capital letter
 
 
-```
+```js
 import React from 'react';
 class App extends React.Component {
   render(){
@@ -52,7 +52,7 @@ export default App
 
 There is another way to create a component - *Stateless function* component
 Class component can have a state
-```
+```js
 import React from 'react';
 const App = () => <h1>Stateless component</h1>
 export default App

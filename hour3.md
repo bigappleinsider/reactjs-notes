@@ -27,7 +27,7 @@ export default App
 ```
 
 - We can access nested values or components we can use props.children
-```
+```js
 import React from 'react';
 class App extends React.Component {
   render(){
@@ -44,7 +44,7 @@ class Heart extends React.Component {
 export default App
 ```
 # Custom props validation
-```
+```js
 Title.propTypes = {
   text(props, propName, component){
     if(!(propName in props)){

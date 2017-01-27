@@ -3,7 +3,7 @@
 - Wrapping our nodes in a parent node solves the above issue
 - wrapping html in parentheses to utilize the whitespace
 
-```
+```js
 import React from 'react';
 
 class App extends React.component {
@@ -25,7 +25,7 @@ class App extends React.component {
 - We can set validation with `txt: React.PropTypes.string.isRequired`
 - We can set default values with `App.defaultProps = {txt:'abc'}`
 
-```
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -36,7 +36,7 @@ ReactDOM.render(
 );
 ```
 
-```
+```js
 import React from 'react';
 
 class App extends React.component {
@@ -57,7 +57,7 @@ export default App
 # State - collection of values that are meant to be changed and managed by our component
 - access state `this.state.txt`
 - set state `this.setState({txt:'val'})`
-```
+```js
 import React from 'react';
 
 class App extends React.component {
