@@ -1,4 +1,9 @@
 # React hour 9  - JSX transpiler
+- custom properties should have `data-` in front, for example,
+`<a href="#" data-test="x">Test</a>`
+- comments `{/* this is a comment */}`
+- conditionals `{i>1 ? 'More than one':'one or less'}` or
+`{i>1 && 'More than one'}`
 
 ```js
 import React from 'react';
@@ -39,5 +44,17 @@ class App extends React.Component {
       </div>
     )
   }
+}
+```
+
+## Inline styles
+```js
+import React from 'react';
+const App  = (props) => {
+  var myStyle = {
+    backgroundColor: '#000',
+    height: 10 //react would add px
+  }
+  return (<div style={myStyle}></div>)
 }
 ```
