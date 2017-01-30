@@ -1,27 +1,3 @@
-# React notetaker app
-React
-  State
-  props
-  Component LifeCycle
-  JSX
-  PropTypes
-  Events
-Webpack
-Firebase (Reactfire)
-Routing (React-Router)
-Network Requests (Axios)
-
-```
-npm install react react-dom
-
-npm install babel-core babel-loader babel-preset-es2015 babel-preset-react
-```
-we will transpile all the JSX we have a output it in `public/bundle.js`
-
-to install webpack globally `npm install webpack -g`
-Webpack config
-```js
-
 module.exports = {
   /*
   tell webpack where our root component is
@@ -51,4 +27,3 @@ module.exports = {
     ]
   }
 }
-```
