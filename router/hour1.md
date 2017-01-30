@@ -100,3 +100,23 @@ class App extends React.Component {
 export default App;
 ```
 - `browserHistory` - no hash in the url, server should always return index.html, single page application will take care of the routing
+- `<IndexRoute>` - render a default component when no other route preset
+- access query string params `{props.location.query.message}`
+- query string in Link: `<Link to={{pathname: '/', query: {message: 'Yo'}}}>Yo</Link>`
+- redirect `<Redirect from='/about' to='/about-us'></Redirect>`
+
+## Route leave hook
+```js
+class Home extends React.Component {
+  componentWillMount(){
+    this.context.router.setRouteLeaveHook(
+      this.props.route,
+      this.routerWillLeave
+    )
+  }
+  routerWillLeave( nextLocation ){
+    return `leaving home form ${nextLocation.pathname}`
+  }
+}
+Home.contextTypes = {router: React.PropTypes.object.isRequired }
+```
