@@ -93,10 +93,10 @@ class App extends React.Component {
         <Route path="/" component={Home}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/contact" component={Contact}></Route>
-
       </Router>
     );
   }
 }
 export default App;
 ```
+- `browserHistory` - no hash in the url, server should always return index.html, single page application will take care of the routing
