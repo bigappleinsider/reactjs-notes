@@ -6,10 +6,16 @@ module.exports = {
   to render all of it's children components
   - starting point for processing JSX
   */
-  entry: "./app/components/Main.js",
+  entry: "./app/App.js",
   /* where to puke out the new transpiled file */
   output: {
-    filename: "public/bundle.js"
+    path: './public',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    inline: true,
+    contentBase: './public',
+    port: 3333
   },
   /*
   we need to tell what to do with code and children components
@@ -17,8 +23,8 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.js$/,
+        exclude: /node_modules|bower_components/,
         loader: 'babel',
         query: {
           presets: ['react', 'es2015']

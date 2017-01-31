@@ -1,4 +1,8 @@
 # React notetaker app
+
+![Hello]
+(https://media.giphy.com/media/6459ZFRF1Wxna/giphy.gif)
+
 React
   State
   props
@@ -12,13 +16,18 @@ Routing (React-Router)
 Network Requests (Axios)
 
 ```
-npm install react react-dom
+npm install react react-dom --save
 
-npm install babel-core babel-loader babel-preset-es2015 babel-preset-react
+npm install babel-core babel-loader babel-preset-es2015 babel-preset-react webpack --save-dev
 ```
 we will transpile all the JSX we have a output it in `public/bundle.js`
 
-to install webpack globally `npm install webpack -g`
+```
+npm install webpack -g
+npm install react-router history --save
+npm install reactfire firebase --save
+```
+
 Webpack config
 ```js
 
