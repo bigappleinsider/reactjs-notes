@@ -25,7 +25,7 @@ we will transpile all the JSX we have a output it in `public/bundle.js`
 ```
 npm install webpack -g
 npm install react-router history --save
-npm install reactfire firebase --save
+npm install re-base --save
 ```
 
 Webpack config
@@ -59,5 +59,18 @@ module.exports = {
       }
     ]
   }
+}
+```
+
+```
+componentDidMount(){
+  //create me a new instance of firebase
+  this.ref = new Firebase('url')
+  let childRef = this.ref.child(this.props.params.username);
+  //method added by a mixin
+  this.bindAsArray(childRef, 'notes');
+}
+componentWillUnmount(){
+  this.unbind('notes');
 }
 ```
