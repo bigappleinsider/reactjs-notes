@@ -26,6 +26,7 @@ we will transpile all the JSX we have a output it in `public/bundle.js`
 npm install webpack -g
 npm install react-router history --save
 npm install re-base --save
+npm install axios --save
 ```
 
 Webpack config
