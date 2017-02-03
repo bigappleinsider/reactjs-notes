@@ -23,7 +23,7 @@ const _removeItem = (item) => {
 };
 
 const _findCartItem = (item) => {
-  return _cartItems.find( cartItem => cartItem.id === item.id )
+  return _cartItems.find( cartItem => cartItem._id === item._id )
 };
 
 const _increaseItem = ( item ) => item.qty++;
@@ -37,6 +37,7 @@ const _decreaseItem = ( item ) => {
 
 const _addItem = ( item ) => {
     const cartItem = _findCartItem( item );
+    //debugger;
     if( !cartItem ){
       _cartItems.push(Object.assign( {qty:1}, item ));
     }
@@ -85,6 +86,10 @@ const AppStore = Object.assign(EventEmitter.prototype, {
     switch(action.actionType){
       case AppConstants.ADD_ITEM:
       _addItem( action.item );
+      break;
+
+      case AppConstants.REMOVE_ITEM:
+      _removeItem( action.item );
       break;
 
       case AppConstants.INCREASE_ITEM:
