@@ -1,6 +1,6 @@
 import React from 'react';
-import AppActions from '../actions/app-actions';
-import CartButton from './app-cart-button';
+import AppActions from '../../actions/app-actions';
+import CartButton from '../cart/app-cart-button';
 
 export default (props) => {
   let img = 'http://lorempixel.com/250/250/nightlife/'+props.idx+'/';
@@ -9,7 +9,12 @@ export default (props) => {
       <h4>{ props.item.title }</h4>
       <img src={img} width="100%" className="img-responsive" />
       <p>{ props.item.summary }</p>
-      <p>{ props.item.cost }</p>
+      <p>
+      ${ props.item.cost }
+      <span className="text-success">
+      {props.item.qty && `(${props.item.qty} in cart)`}
+      </span>
+      </p>
       <CartButton handler={AppActions.addItem.bind(null, props.item)} txt="Add To Cart" />
     </div>
   )
