@@ -8,7 +8,7 @@ let _catalog = [];
 
 for(let i = 1; i < 9; i++){
   _catalog.push({
-    '_id': 'Widget' + i,
+    'id': 'Widget' + i,
     'title': 'Widget #' + i,
     'summary': 'A great widget',
     'description': 'Lorem ipsum dolor sit amet',
@@ -23,7 +23,7 @@ const _removeItem = (item) => {
 };
 
 const _findCartItem = (item) => {
-  return _cartItems.find( cartItem => cartItem._id === item._id )
+  return _cartItems.find( cartItem => cartItem.id === item.id )
 };
 
 const _increaseItem = ( item ) => item.qty++;
@@ -49,7 +49,7 @@ const _addItem = ( item ) => {
 const _cartTotals = ( qty = 0, total = 0 ) => {
   _cartItems.forEach( cartItem => {
     qty += cartItem.qty;
-    total += cartItem.qty * cartItem.const;
+    total += cartItem.qty * cartItem.cost;
   });
   return {qty, total};
 }
@@ -74,7 +74,7 @@ const AppStore = Object.assign(EventEmitter.prototype, {
 
   getCatalog(){
     return _catalog.map(item => {
-      return Object.assign( {}, item, _cartItems.find( cItem => cItem._id === item._id))
+      return Object.assign( {}, item, _cartItems.find( cItem => cItem.id === item.id))
     });
   },
 
