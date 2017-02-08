@@ -5,7 +5,7 @@ npm init
 npm i -S experess
 npm i -D nodemon
 npm i -S jade
-npm i -S handlebars
+npm i -S handlebars consolidate
 
 
 ```
@@ -68,4 +68,35 @@ Setting properties on application to render views
 ```js
 app.set('views'. './views')
 app.set('view engine', 'jade')
+```
+HTTP verbs
+```js
+app.put('/:username', function (req, res) {
+  var username = req.params.username
+  var user = getUser(username)
+  user.location = req.body
+  saveUser(username, user)
+  res.end()
+})
+app.delete('/:username', function(req, res) {
+  var fp = getUserFilePath(req.params.username)
+  fp.unlinkSync(fp)
+  res.sendStatus(200)
+})
+app.get('*.json', function (req, res) {
+  res.download('./users/'+req.path, 'virus.exe')
+})
+If you are building API
+app.get('/data/:username', function(req, res) {
+  var username = req.params.username
+  var user = getUser(username)
+  res.json(user)
+})
+
+call for all methods that match the route
+app.all(':username', function (req, res, next) {
+  console.log(req.method, 'for', req.params.username)
+  next()
+})
+
 ```
