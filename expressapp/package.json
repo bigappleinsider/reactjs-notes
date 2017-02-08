@@ -1,0 +1,22 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "``` npm init npm -i -S experess",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.0.6",
+    "jade": "^1.11.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
