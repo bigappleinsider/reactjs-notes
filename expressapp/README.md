@@ -92,6 +92,9 @@ app.get('/data/:username', function(req, res) {
   var user = getUser(username)
   res.json(user)
 })
+Avoid redefining path
+app.route('/:username')
+  .all().put().delete()
 
 call for all methods that match the route
 app.all(':username', function (req, res, next) {
@@ -100,3 +103,7 @@ app.all(':username', function (req, res, next) {
 })
 
 ```
+
+**Code Organization**
+- move utility functions to `helpers.js`
+- move routes to `username.js`
