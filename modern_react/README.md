@@ -45,3 +45,15 @@ App doesn't care when state is changed
 Glue between react and redux
 connect - takes a function and a component and produces a container
 `export default connect(mapStateToProps)(BookList);`
+
+## Mystery context
+- Bind context of onInputChange
+- If you ever pass around callback and it has reference to `this` -> you need to bind to the context
+- bind in the constructor
+```js
+this.onInputChange = this.onInputChange.bind(this);
+```
+## Middleware - gatekeeper/doorman/bouncer
+- functions that take an action and it choose action to manipulate, pass-through, or stop
+- popular Middleware for redux `npm i -S redux-promise`
+- Middleware stops action until the promise is resolved
