@@ -8,6 +8,9 @@ Install package Youtube API Search
 ```
 npm i -S youtube-api-search
 npm i -S lodash
+npm i -S react-sparklines
+npm i -S react-google-maps@4.7.1
+
 ```
 
 ## ES6
