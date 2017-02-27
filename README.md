@@ -16,3 +16,5 @@
 |[Hour 12](basics/hour12.md)|Reusable and composable components|
 |[Hour 13](router/README.md)|Router|
 |[Hour 13](expressapp/README.md)|Express JS|
+|[Hour 14](https://github.com/bigappleinsider/weather-app)|Weather App|
+|[Hour 15](https://github.com/bigappleinsider/blog-app)|Blog App|
