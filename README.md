@@ -20,3 +20,4 @@
 |[Hour 15](https://github.com/bigappleinsider/blog-app)|Blog App|
 |[Hour 16](https://github.com/bigappleinsider/react-testing)|Tesing with mocha chai|
 |[Hour 17](https://github.com/bigappleinsider/auth-server)|Auth Server|
+|[Hour 18](https://github.com/bigappleinsider/auth-client)|Auth Client|
